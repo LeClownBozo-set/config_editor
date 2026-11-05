@@ -1,0 +1,17 @@
+[mgr]
+prepend_keymap = [
+  { on = [ "g", "d" ], run = "cd ~/Téléchargements", desc = "Aller à ~/Téléchargements" },
+  { on = [ "g", "m" ], run = "plugin mount", desc = "Disques et clés USB (Mount manager)" },
+  { on = [ "g", "M" ], run = "cd /run/media/leclownbozo", desc = "Dossier /run/media/leclownbozo" },
+  { on = [ "M" ], run = "plugin mount", desc = "Disques et clés USB (Mount manager)" },
+  { on = [ "U" ], run = "shell 'udiskie-umount \"$0\"' --confirm", desc = "Démonter le disque sélectionné" },
+]
+
+[manager]
+prepend_keymap = [
+  { on = [ "g", "d" ], run = "cd ~/Téléchargements", desc = "Aller à ~/Téléchargements" },
+  { on = [ "g", "m" ], run = "plugin mount", desc = "Disques et clés USB (Mount manager)" },
+  { on = [ "g", "M" ], run = "cd /run/media/ehrhardtvictor", desc = "Dossier /run/media/ehrhardtvictor" },
+  { on = [ "M" ], run = "plugin mount", desc = "Disques et clés USB (Mount manager)" },
+  { on = [ "U" ], run = "shell 'udiskie-umount \"$0\"' --confirm", desc = "Démonter le disque sélectionné" },
+]

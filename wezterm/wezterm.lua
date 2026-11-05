@@ -9,14 +9,17 @@ local config = wezterm.config_builder()
 -- For example, changing the initial geometry for new windows:
 config.initial_cols = 150
 config.initial_rows = 28
-
+config.front_end = "OpenGL"
+config.max_fps = 144
+config.animation_fps = 150
+--config.enable_wayland = false
 -- or, changing the font size and color scheme.
 config.window_close_confirmation = 'NeverPrompt'
-config.font_size = 14.5
+config.font_size = 13.5
 config.color_scheme = 'Sakura'
-config.font = wezterm.font 'Fira Code Nerd Font'
-config.window_decorations = "RESIZE"
-config.window_background_opacity = 0.85
+config.font = wezterm.font('Fira Code Nerd Font Mono', { weight = "Medium" })
+config.window_decorations = "NONE"
+config.window_background_opacity = 1 --0.85
 config.window_padding = {
     left = 5,
     right = 5,
@@ -64,6 +67,11 @@ config.colors = {
             fg_color = '#ffffff',
         },
     },
+    ansi = {
+        -- Index : 1      2      3 (VERT)   4      5      6      7      8
+        -- Correspond : noir, rouge, vert, jaune, bleu, magenta, cyan, blanc
+        "#1a1b26", "#f7768e", "#ff007f", "#e0af68", "#7aa2f7", "#f700ff", "#7dcfff", "#a9b1d6"
+    },
 }
 
 
@@ -86,7 +94,7 @@ config.keys = {
             title = "Choisir un projet",
             choices = {
                 { label = "Alea-web",  id = wezterm.home_dir .. "/Bureau/AleasAdventure/Alea-sAdventuresWebSite/" },
-                { label = "Alea-game", id = "/home/ehrhardtvictor/Bureau/AleasAdventure/Alea-sAdventuresGame/" },
+                { label = "Alea-game", id = "/home/leclownbozo/Alea-sAdventuresGame/GameTest_Fonctionnel" },
             },
             action = wezterm.action_callback(function(window, pane, id, label)
                 if id then
