@@ -94,7 +94,8 @@ config.keys = {
             title = "Choisir un projet",
             choices = {
                 { label = "Alea-web",  id = wezterm.home_dir .. "/Bureau/AleasAdventure/Alea-sAdventuresWebSite/" },
-                { label = "Alea-game", id = "/home/leclownbozo/Alea-sAdventuresGame/GameTest_Fonctionnel" },
+                { label = "Alea-game", id = "/home/ehrhardtvictor/Bureau/AleasAdventure/Alea-sAdventuresGame/GameTest_Fonctionnel" },
+                { label = "Tp", id = "/home/ehrhardtvictor/Bureau/tp_epita" },
             },
             action = wezterm.action_callback(function(window, pane, id, label)
                 if id then
